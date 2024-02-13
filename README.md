@@ -1,6 +1,7 @@
 # figma-sim
 A simulation of designs using the Figma API
 
+<<<<<<< Updated upstream
 ## The Plan
 
 1.  A method to manipulate elements in virtual graphical environments with the following benefits:
@@ -51,3 +52,5 @@ Updating Elements: While the Figma API allows for some level of modification (li
 4. **External Scripting for Automation**: For operations not supported directly by the Figma API or plugins, consider developing an external script or application that interacts with Figma through its API. This could involve more complex logic for adding, removing, or updating elements based on your specific requirements.
 
 5. **Image Retrieval**: For retrieving images of the entire modified frame, the Figma API supports exporting frames as images. This functionality can be integrated into your workflow to get the final visual output after modifications.
+=======
+>>>>>>> Stashed changes
