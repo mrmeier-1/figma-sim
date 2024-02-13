@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+ <body>
+    <button id="moveButton">Move Elements</button>
+    <script>
+      document.getElementById('moveButton').addEventListener('click', function() {
+        parent.postMessage({ pluginMessage: { type: 'move-elements' } }, '*');
+      });
+    </script>
+ </body>
+</html>
+
+
