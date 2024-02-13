@@ -15,8 +15,8 @@ interface MovementConfig {
 // This is the main plugin code file
 const movementConfig = {
   "movements": [
-    {"id": "element_id_1", "newX": 100, "newY": 100},
-    {"id": "element_id_2", "newX": 200, "newY": 200}
+    {"id": "1:2", "newX": 100, "newY": 100},
+    {"id": "1:2", "newX": 200, "newY": 200}
   ]
 };
 
