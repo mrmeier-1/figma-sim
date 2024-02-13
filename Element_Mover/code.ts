@@ -33,7 +33,7 @@ function moveElements(config: MovementConfig) {
 moveElements(movementConfig);
 
 
-figma.showUI(`ui.html`, {width: 240, height: 100});
+figma.showUI('ui.html', {width: 240, height: 100});
 
 // Listen for messages from the plugin UI
 figma.ui.onmessage = msg => {
