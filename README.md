@@ -1,5 +1,5 @@
 # figma-sim
-A simulation of designs using the Figma API
+Simulating designs using the Figma API / Figma Plugin API
 
 ## A. The Plan
 
