@@ -5,10 +5,10 @@ Simulating designs using the Figma API / Figma Plugin API
 
 Achieve the following:
 
-**Programmatic Screen Generation**
-1. Generate screenshots of frames in figma
-2. extract elements data from Figma frames
-3. Modify elements inside frames
+**Programmatic Screen Training Data Generation Using Figma**
+1. Generate high-res screenshots of figma compositions.
+2. Extract property data from Figma elements.
+3. Modify elements' properties at will.
 4. Do all of the above with a programatic API.
 
 **Internal Requirements (For AskUI employees only)**: https://www.notion.so/askui/Requirements-Figma-Simulator-a8c3380917794fdf8e35c73dc7232d8c?pvs=4
