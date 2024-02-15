@@ -44,9 +44,9 @@ This feature uses the Figma API to extract data from any frame in any figma file
 
 To do this by provide the following information in the `getter_script.py`:
 
-`FIGMA_ACCESS_TOKEN`: Your personal figma access token. [Learn more](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-`FILE_ID`: The id of the figma file that contains the content, that you want to access. [Learn more](https://help.figma.com/hc/en-us/articles/360052378433-Bubble-and-Figma#:~:text=The%20file%20ID%20is%20the,from%20your%20browser's%20address%20bar.)
-`FRAME_ID` The node id of a frame that you want to specify in your request.[Learn more](https://www.figma.com/plugin-docs/api/FrameNode/)
+- `FIGMA_ACCESS_TOKEN`: Your personal figma access token. [Learn more](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
+- `FILE_ID`: The id of the figma file that contains the content, that you want to access. [Learn more](https://help.figma.com/hc/en-us/articles/360052378433-Bubble-and-Figma#:~:text=The%20file%20ID%20is%20the,from%20your%20browser's%20address%20bar.)
+- `FRAME_ID` The node id of a frame that you want to specify in your request.[Learn more](https://www.figma.com/plugin-docs/api/FrameNode/)
 
 Run the script in your terminal with `python getter_script.py`.
 
