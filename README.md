@@ -37,7 +37,7 @@ This process sets up the development environment, allowing you to start working 
 
 Currently, this project has two main features:
 1. Extract visual data from a figma file
-2. 2. Manipulate element properties (WIP)
+2. Manipulate element properties (WIP)
 
 ### Visual Data Extraction
 This feature uses the Figma API to extract data from any frame in any figma file. Moreover users can take high-res screenshots in variable screen sizes, resolutions and aspect ratios.
