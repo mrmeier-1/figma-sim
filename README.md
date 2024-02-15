@@ -33,7 +33,7 @@ To set up the Figma plugin and VSCode project from a GitHub repository on your m
 
 This process sets up the development environment, allowing you to start working on the plugin and test changes within Figma. Remember to commit and push your changes to GitHub regularly to keep your repository up to date.
 
-##C. State of Development
+## C. State of Development
 
 Currently, this project has two main features:
     1. Extract visual data from a figma file
@@ -62,7 +62,7 @@ You can also load up the plugin from the `manifest.json` and select elements to 
 - finding element by id doesn't wrk yet.
 - changing properties doesn't work yet.
 
-##D. Jump Back In
+## D. Jump Back In
 
 Here's a short guide to get back on track with the Figma-Sim Project and focus on the next steps:
 
