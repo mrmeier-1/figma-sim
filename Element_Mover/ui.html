@@ -1,17 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My Plugin UI</title>
-  </head>
- <body>
-    <button id="moveButton">Move Elements</button>
+    <title>Figma Element Manipulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 8px;
+        }
+        label, button {
+            display: block;
+            margin: 8px 0;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input:disabled {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <label for="element-id">Element ID:</label>
+    <input type="text" id="element-id" placeholder="Enter Element ID">
+
+    <button id="find-element">Find Element</button>
+
+    <label for="width">Width:</label>
+    <input type="text" id="width" disabled>
+
+    <label for="height">Height:</label>
+    <input type="text" id="height" disabled>
+
+    <label for="x-position">X Position:</label>
+    <input type="text" id="x-position" disabled>
+
+    <label for="y-position">Y Position:</label>
+    <input type="text" id="y-position" disabled>
+
+    <label for="fill-color">Fill Color:</label>
+    <input type="text" id="fill-color" disabled>
+
+    <label for="corner-radius">Corner Radius:</label>
+    <input type="text" id="corner-radius" disabled>
+
+    <button id="update-properties" disabled>Update Properties</button>
+
     <script>
-      document.getElementById('moveButton').addEventListener('click', function() {
-        parent.postMessage({ pluginMessage: { type: 'move-elements' } }, '*');
+      const elementIdInput = document.getElementById('element-id');
+      const widthInput = document.getElementById('width');
+      const heightInput = document.getElementById('height');
+      const xPosInput = document.getElementById('x-position');
+      const yPosInput = document.getElementById('y-position');
+      const fillColorInput = document.getElementById('fill-color');
+      const cornerRadiusInput = document.getElementById('corner-radius');
+      const updateButton = document.getElementById('update-properties');
+    
+      // Enable or disable property fields
+      function setPropertiesEnabled(enabled) {
+        const inputs = [widthInput, heightInput, xPosInput, yPosInput, fillColorInput, cornerRadiusInput];
+        inputs.forEach(input => input.disabled = !enabled);
+        updateButton.disabled = !enabled;
+      }
+    
+      // Send a message to the main code to find an element by ID
+      document.getElementById('find-element').addEventListener('click', () => {
+        const elementId = elementIdInput.value;
+        parent.postMessage({ pluginMessage: { type: 'find-element', id: elementId } }, '*');
       });
-    </script>
- </body>
+    
+      // Send a message to the main code to update element properties
+      updateButton.addEventListener('click', () => {
+        const properties = {
+          id: elementIdInput.value,
+          width: parseFloat(widthInput.value),
+          height: parseFloat(heightInput.value),
+          x: parseFloat(xPosInput.value),
+          y: parseFloat(yPosInput.value),
+          fillColor: fillColorInput.value,
+          cornerRadius: parseFloat(cornerRadiusInput.value)
+        };
+        parent.postMessage({ pluginMessage: { type: 'update-properties', properties } }, '*');
+      });
+    
+      // Handle messages from the main code
+      onmessage = (event) => {
+        const { type, id, properties } = event.data.pluginMessage;
+        if (type === 'element-selected') {
+          elementIdInput.value = id;
+          widthInput.value = properties.width;
+          heightInput.value = properties.height;
+          xPosInput.value = properties.x;
+          yPosInput.value = properties.y;
+          fillColorInput.value = properties.fillColor;
+          cornerRadiusInput.value = properties.cornerRadius;
+          setPropertiesEnabled(true);
+        }
+      };
+    </script>    
+</body>
 </html>
-
-
