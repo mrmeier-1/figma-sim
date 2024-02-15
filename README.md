@@ -66,17 +66,17 @@ You can also load up the plugin from the `manifest.json` and select elements to 
 
 Here's a short guide to get back on track with the Figma-Sim Project and focus on the next steps:
 
-- [x] Resolve TypeScript Compilation Issues**: The immediate task was troubleshooting TypeScript errors related to the Figma API's figma global object not being recognized. This involves ensuring @figma/plugin-typings are correctly installed and configured in your tsconfig.json.
+- [x] **Resolve TypeScript Compilation Issues**: The immediate task was troubleshooting TypeScript errors related to the Figma API's figma global object not being recognized. This involves ensuring @figma/plugin-typings are correctly installed and configured in your tsconfig.json.
     - [x] This task was resolved, by using the compilation command `tsc -p "tsconfig.json"` which points to the config.
     - [x] I was also able to get me UI to show up.
     - [x] added documentation in readme.
 
-- [] Enhance Plugin Functionality**: After resolving TypeScript issues, the next step involves enhancing your plugin's functionality based on the last successful iteration. This might include refining the movement logic, improving the UI interaction, or expanding the plugin to support more complex manipulations within Figma.
+- [ ] **Enhance Plugin Functionality**: After resolving TypeScript issues, the next step involves enhancing your plugin's functionality based on the last successful iteration. This might include refining the movement logic, improving the UI interaction, or expanding the plugin to support more complex manipulations within Figma.
     - [x] I'm currently in the middle of building the `code.ts` and `ui.html`, so that a user can view the properties of a selected element inside the plugins UI.
-    - [] My next step will be to do two more things with the ui.
-        - [] Select an element based on it's node id.
-        - [] Change an elements properties based on user input through the UI.          
-    - [] Admittedly, this is not very cool (yet), but it's a sort-of precursor for the programmatic API, which will also read and write to the elements properties.
-    - [] Eventually, we should be able to generate screen data incredibly fast.
+    - [ ] My next step will be to do two more things with the ui.
+        - [ ] Select an element based on it's node id.
+        - [ ] Change an elements properties based on user input through the UI.          
+    - [ ] Admittedly, this is not very cool (yet), but it's a sort-of precursor for the programmatic API, which will also read and write to the elements properties.
+    - [ ] Eventually, we should be able to generate screen data incredibly fast.
 
 # GLHF; 🫡
